@@ -17,26 +17,15 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:id="@+id/numbers"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:text="5 + 3 = 8"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toTopOf="@+id/result"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.879" />
-
-        <TextView
             android:id="@+id/result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="92dp"
-            android:text="8"
+            android:maxLength="8"
+            android:text=""
             android:textSize="45sp"
-            app:layout_constraintEnd_toEndOf="@+id/numbers"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="367dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -44,9 +33,7 @@
         android:id="@+id/secondC"
         android:layout_width="match_parent"
         android:layout_height="600dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:background="#635D5D"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -70,48 +57,47 @@
                 android:layout_margin="0dp"
                 android:layout_marginTop="40dp"
                 android:text="lg"
-                app:layout_constraintEnd_toStartOf="@+id/minus"
+                app:layout_constraintEnd_toStartOf="@+id/ln"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/minus"
+                android:id="@+id/ln"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:text="ln"
-                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintBottom_toBottomOf="@+id/plus11"
                 app:layout_constraintEnd_toStartOf="@+id/asin"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/plus"
-                app:layout_constraintTop_toTopOf="@+id/plus"
+                app:layout_constraintStart_toEndOf="@+id/plus11"
+                app:layout_constraintTop_toTopOf="@+id/plus11"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/asin"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
-
                 android:text="asin"
-                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintBottom_toBottomOf="@+id/plus11"
                 app:layout_constraintEnd_toStartOf="@+id/acos"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/minus"
-                app:layout_constraintTop_toTopOf="@+id/plus"
+                app:layout_constraintStart_toEndOf="@+id/ln"
+                app:layout_constraintTop_toTopOf="@+id/plus11"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/acos"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
-                android:textAllCaps="false"
                 android:text="acos"
-                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="@+id/plus11"
                 app:layout_constraintEnd_toStartOf="@+id/atan"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/asin"
-                app:layout_constraintTop_toTopOf="@+id/plus"
+                app:layout_constraintTop_toTopOf="@+id/plus11"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -120,11 +106,11 @@
                 android:layout_height="50dp"
                 android:layout_marginEnd="48dp"
                 android:text="atan"
-                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintBottom_toBottomOf="@+id/plus11"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/acos"
-                app:layout_constraintTop_toTopOf="@+id/plus"
+                app:layout_constraintTop_toTopOf="@+id/plus11"
                 tools:ignore="MissingConstraints" />
         </LinearLayout>
 
@@ -137,7 +123,7 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/plus2"
+                android:id="@+id/startbracet"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -148,7 +134,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/minus2"
+                android:id="@+id/endbracet"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -157,7 +143,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dot2"
+                android:id="@+id/sin"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -166,7 +152,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/div2"
+                android:id="@+id/cos"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -175,7 +161,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/back2"
+                android:id="@+id/tan"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -194,7 +180,7 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/plus1"
+                android:id="@+id/ln3"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -205,7 +191,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/minus1"
+                android:id="@+id/ac"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -214,16 +200,16 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dot1"
+                android:id="@+id/clear"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
-                android:text="*"
+                android:text="C"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/div1"
+                android:id="@+id/perc"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -232,7 +218,7 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/back1"
+                android:id="@+id/div"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -251,7 +237,7 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/plus4"
+                android:id="@+id/x2"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -262,34 +248,37 @@
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/minus4"
+                android:id="@+id/seven"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
+                android:onClick="onClickNumber"
                 android:text="7"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dot4"
+                android:id="@+id/eight"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
+                android:onClick="onClickNumber"
                 android:text="8"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/div4"
+                android:id="@+id/nine"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
-                android:text="/"
+                android:onClick="onClickNumber"
+                android:text="9"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/back4"
+                android:id="@+id/multiplication"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -308,26 +297,29 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/plus5"
+                android:id="@+id/ccc"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginTop="40dp"
+                android:text="ccc"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/minus5"
+                android:id="@+id/four"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="4"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dot5"
+                android:id="@+id/five"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="5"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
@@ -336,16 +328,17 @@
                 android:id="@+id/six"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="6"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/back5"
+                android:id="@+id/plus11"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="48dp"
-                android:text="-"
+                android:text="+"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
         </LinearLayout>
@@ -359,7 +352,7 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/plus6"
+                android:id="@+id/ccccc"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
@@ -373,14 +366,16 @@
                 android:id="@+id/one"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="1"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dot6"
+                android:id="@+id/two"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="2"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
@@ -389,12 +384,13 @@
                 android:id="@+id/three"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="3"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/back6"
+                android:id="@+id/minus"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="48dp"
@@ -412,20 +408,22 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/plus7"
+                android:id="@+id/tripleZero"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginTop="40dp"
+                android:onClick="onClickNumber"
                 android:text="000"
                 app:layout_constraintHorizontal_bias="0.5"
 
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/minus7"
+                android:id="@+id/doubleZero"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="00"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
@@ -434,20 +432,22 @@
                 android:id="@+id/zero"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="0"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/div7"
+                android:id="@+id/dot"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
+                android:onClick="onClickNumber"
                 android:text="."
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/back7"
+                android:id="@+id/equl"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_marginEnd="48dp"
@@ -459,15 +459,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
             android:text="The Chance Significant Calculator"
+            android:textColor="@color/white"
+            android:textSize="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/seventhline"
-            tools:ignore="MissingConstraints"
-            android:layout_marginTop="70dp"
-            android:textSize="20dp"
-            android:textColor="@color/white"/>
+            tools:ignore="MissingConstraints" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
