@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3E1E1"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/firstC"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#EBF1F0"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="5 + 3 = 8"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/result"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.879" />
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="92dp"
+            android:text="8"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="@+id/numbers"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/secondC"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#635D5D"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstC"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:id="@+id/firstline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                android:text="lg"
+                app:layout_constraintEnd_toStartOf="@+id/minus"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="ln"
+                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintEnd_toStartOf="@+id/dot"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/plus"
+                app:layout_constraintTop_toTopOf="@+id/plus"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+
+                android:text="asin"
+                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintEnd_toStartOf="@+id/div"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/minus"
+                app:layout_constraintTop_toTopOf="@+id/plus"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+
+                android:text="acos"
+                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintEnd_toStartOf="@+id/back"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/dot"
+                app:layout_constraintTop_toTopOf="@+id/plus"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="48dp"
+                android:text="atan"
+                app:layout_constraintBottom_toBottomOf="@+id/plus"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/div"
+                app:layout_constraintTop_toTopOf="@+id/plus"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/secondline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/firstline"
+            tools:ignore="MissingConstraints,UnknownId">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus2"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                android:text="("
+                app:layout_constraintHorizontal_bias="0.5"
+
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus2"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text=")"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot2"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="sin"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div2"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="cos"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back2"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginEnd="48dp"
+                android:text="tan"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/thirdline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/secondline"
+            tools:ignore="MissingConstraints,UnknownId">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus1"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                android:text="ln3"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus1"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="ac"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot1"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="*"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div1"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="%"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back1"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginEnd="48dp"
+                android:text="/"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/forthline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/thirdline"
+            tools:ignore="MissingConstraints,UnknownId">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus4"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                android:text="x2"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus4"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="7"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot4"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="8"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div4"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:text="/"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back4"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginEnd="48dp"
+                android:text="*"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/fifthline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/forthline"
+            tools:ignore="MissingConstraints,UnknownId">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus5"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus5"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="4"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot5"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="5"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div5"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="6"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back5"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="48dp"
+                android:text="-"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/sixthline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/fifthline"
+            tools:ignore="MissingConstraints,UnknownId">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus6"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                android:text="+"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus6"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="1"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot6"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="2"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div6"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="3"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back6"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="48dp"
+                android:text="_"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/seventhline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/sixthline"
+            tools:ignore="MissingConstraints,UnknownId">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/plus7"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_margin="0dp"
+                android:layout_marginTop="40dp"
+                android:text="000"
+                app:layout_constraintHorizontal_bias="0.5"
+
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/minus7"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="00"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dot7"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="0"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/div7"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:text="."
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/back7"
+                android:layout_width="65dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="48dp"
+                android:text="="
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Chance Significant Calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seventhline"
+            tools:ignore="MissingConstraints"
+            android:layout_marginTop="70dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
