@@ -23,6 +23,8 @@
             android:layout_marginTop="92dp"
             android:maxLength="8"
             android:text=""
+            android:textDirection="ltr"
+            android:fontFamily="@font/digital"
             android:textSize="45sp"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="367dp" />
@@ -51,12 +53,12 @@
             tools:ignore="MissingConstraints">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/lg"
+                android:id="@+id/log"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginTop="40dp"
-                android:text="lg"
+                android:text="log"
                 app:layout_constraintEnd_toStartOf="@+id/ln"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -453,7 +455,8 @@
                 android:layout_marginEnd="48dp"
                 android:text="="
                 app:layout_constraintHorizontal_bias="0.5"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+                />
         </LinearLayout>
 
         <TextView

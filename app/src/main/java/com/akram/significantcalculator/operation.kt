@@ -6,5 +6,12 @@ enum class operation {
     div,
     mul,
     perc,
-
+    sin,
+    cos,
+    tan,
+    asin,
+    acos,
+    atan,
+    ln,
+    log,
 }

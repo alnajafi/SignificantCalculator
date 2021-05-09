@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import java.lang.Math.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +16,15 @@ class MainActivity : AppCompatActivity() {
     lateinit var equal: Button
     lateinit var result: TextView
     lateinit var clear: Button
-    lateinit var  perc: Button
+    lateinit var perc: Button
+    lateinit var sin: Button
+    lateinit var cos: Button
+    lateinit var tan: Button
+    lateinit var asin: Button
+    lateinit var acos: Button
+    lateinit var atan: Button
+    lateinit var ln: Button
+    lateinit var log: Button
     var lasrNumber: Double = 0.0
     var currenOperation: operation? = null
 
@@ -47,6 +56,27 @@ class MainActivity : AppCompatActivity() {
         perc.setOnClickListener {
             prepareOperation(operation.perc)
         }
+        sin.setOnClickListener {
+            prepareOperation(operation.sin)
+        }
+        cos.setOnClickListener {
+            prepareOperation(operation.cos)
+        }
+        tan.setOnClickListener {
+            prepareOperation(operation.tan)
+        }
+        asin.setOnClickListener {
+            prepareOperation(operation.asin)
+        }
+        tan.setOnClickListener {
+            prepareOperation(operation.tan)
+        }
+        atan.setOnClickListener {
+            prepareOperation(operation.atan)
+        }
+        log.setOnClickListener {
+            prepareOperation(operation.log)
+        }
         equal.setOnClickListener {
            val answer = doCurrentOperation()
             result.text = answer.toString()
@@ -62,8 +92,16 @@ class MainActivity : AppCompatActivity() {
             operation.minus -> lasrNumber - secondNumber
             operation.div -> lasrNumber / secondNumber
             operation.mul -> lasrNumber * secondNumber
+            operation.sin -> sin(secondNumber)
+            operation.cos -> cos(secondNumber)
+            operation.asin -> asin(secondNumber)
+            operation.acos -> acos(secondNumber)
+            operation.tan -> tan(secondNumber)
+            operation.atan -> atan(secondNumber)
+            operation.log -> log(secondNumber)
             operation.perc -> secondNumber / 100
             null -> 0.0
+            operation.ln -> TODO()
         }
     }
 
@@ -80,6 +118,13 @@ class MainActivity : AppCompatActivity() {
         result = findViewById(R.id.result)
         clear = findViewById(R.id.clear)
         perc = findViewById(R.id.perc)
+        sin = findViewById(R.id.sin)
+        cos = findViewById(R.id.cos)
+        tan = findViewById(R.id.tan)
+        asin = findViewById(R.id.asin)
+        acos = findViewById(R.id.acos)
+        atan = findViewById(R.id.atan)
+        log = findViewById(R.id.log)
 
 
 
