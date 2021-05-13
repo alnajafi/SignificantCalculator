@@ -25,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var atan: Button
     lateinit var ln: Button
     lateinit var log: Button
+    lateinit var exp: Button
+    lateinit var n: Button
     var lasrNumber: Double = 0.0
     var currenOperation: operation? = null
 
@@ -68,6 +70,9 @@ class MainActivity : AppCompatActivity() {
         asin.setOnClickListener {
             prepareOperation(operation.asin)
         }
+        acos.setOnClickListener {
+            prepareOperation(operation.acos)
+        }
         tan.setOnClickListener {
             prepareOperation(operation.tan)
         }
@@ -77,6 +82,13 @@ class MainActivity : AppCompatActivity() {
         log.setOnClickListener {
             prepareOperation(operation.log)
         }
+        n.setOnClickListener {
+            prepareOperation(operation.n)
+        }
+        exp.setOnClickListener {
+            prepareOperation(operation.exp)
+        }
+
         equal.setOnClickListener {
            val answer = doCurrentOperation()
             result.text = answer.toString()
@@ -99,6 +111,8 @@ class MainActivity : AppCompatActivity() {
             operation.tan -> tan(secondNumber)
             operation.atan -> atan(secondNumber)
             operation.log -> log(secondNumber)
+            operation.n -> secondNumber+(secondNumber-1)+(secondNumber-2)+(secondNumber-3)+(secondNumber-4)
+            operation.exp -> exp(secondNumber)
             operation.perc -> secondNumber / 100
             null -> 0.0
             operation.ln -> TODO()
@@ -125,7 +139,8 @@ class MainActivity : AppCompatActivity() {
         acos = findViewById(R.id.acos)
         atan = findViewById(R.id.atan)
         log = findViewById(R.id.log)
-
+        exp = findViewById(R.id.exp)
+        n = findViewById(R.id.n)
 
 
     }

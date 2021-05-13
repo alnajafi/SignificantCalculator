@@ -4,40 +4,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3E1E1"
+    android:background="#98D1D8"
+    android:textDirection="ltr"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/firstC"
         android:layout_width="match_parent"
-        android:layout_height="160dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:background="#EBF1F0"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <TextView
             android:id="@+id/result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
-            android:maxLength="8"
-            android:text=""
-            android:textDirection="ltr"
+            android:layout_marginTop="94dp"
+            android:layout_marginEnd="40dp"
             android:fontFamily="@font/digital"
+            android:gravity="end"
+            android:maxLength="9"
+            android:text=""
+
+            android:textDirection="locale"
             android:textSize="45sp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="367dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/secondC"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="400dp"
+        android:layout_marginStart="22dp"
         android:layout_marginTop="20dp"
-        android:background="#635D5D"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/shape"
         android:paddingStart="20dp"
+        android:paddingTop="20dp"
         android:paddingEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,7 +76,9 @@
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/ln"
@@ -266,6 +281,7 @@
                 android:layout_margin="0dp"
                 android:onClick="onClickNumber"
                 android:text="8"
+                android:textDirection="ltr"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
@@ -276,6 +292,7 @@
                 android:layout_margin="0dp"
                 android:onClick="onClickNumber"
                 android:text="9"
+                android:textDirection="ltr"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
@@ -299,12 +316,12 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ccc"
+                android:id="@+id/exp"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginTop="40dp"
-                android:text="ccc"
+                android:text="exp"
                 app:layout_constraintHorizontal_bias="0.5"
                 tools:ignore="MissingConstraints" />
 
@@ -354,15 +371,17 @@
             tools:ignore="MissingConstraints,UnknownId">
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ccccc"
+                android:id="@+id/n"
                 android:layout_width="65dp"
                 android:layout_height="50dp"
                 android:layout_margin="0dp"
                 android:layout_marginTop="40dp"
-                android:text="+"
+                android:text="n!"
                 app:layout_constraintHorizontal_bias="0.5"
 
-                tools:ignore="MissingConstraints" />
+                tools:ignore="MissingConstraints"
+
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/one"
@@ -455,22 +474,21 @@
                 android:layout_marginEnd="48dp"
                 android:text="="
                 app:layout_constraintHorizontal_bias="0.5"
-                tools:ignore="MissingConstraints"
-                />
+                tools:ignore="MissingConstraints" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="70dp"
-            android:text="The Chance Significant Calculator"
-            android:textColor="@color/white"
-            android:textSize="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/seventhline"
-            tools:ignore="MissingConstraints" />
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="70dp"-->
+        <!--            android:text="Significant Calculator"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="28dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintHorizontal_bias="0.5"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/seventhline"-->
+        <!--            tools:ignore="MissingConstraints" />-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,4 +14,6 @@ enum class operation {
     atan,
     ln,
     log,
+    exp,
+    n,
 }
